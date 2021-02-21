@@ -3,8 +3,7 @@
 
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "precise64-cloudimg"
-  config.vm.box_url = "http://cloud-images.ubuntu.com/precise/current/precise-server-cloudimg-vagrant-amd64-disk1.box"
+  config.vm.box = "ubuntu/xenial64"
 
   config.vm.provider :virtualbox do |vb|
     vb.gui = true
