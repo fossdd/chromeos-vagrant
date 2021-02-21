@@ -23,10 +23,9 @@ then
 fi
 
 # Locate data in /vagrant with a symlink to /home/vagrant
-sudo mv /home/vagrant/ /vagrant/data
-sudo ln -s /vagrant/data /home/vagrant
-
-cd /home/vagrant
+sudo mv $HOME /vagrant/data
+sudo ln -s /vagrant/data $HOME
+cd $HOME
 
 echo '=== UPDATE APT ==='
 sudo apt-get update
@@ -37,7 +36,6 @@ git config --global user.name "A Vagrant box"
 git config --global user.email "vagrant@localhost"
 
 echo '=== INSTALL DEPOT TOOLS ==='
-cd $HOME
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 ## http://dev.chromium.org/developers/how-tos/install-depot-tools specifically
 ## says to put depot_tools at the end of the path
