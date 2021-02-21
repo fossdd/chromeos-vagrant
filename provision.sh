@@ -22,6 +22,10 @@ then
   exit 0
 fi
 
+# Locate data in /vagrant with a symlink to /home/vagrant
+sudo mv /home/vagrant/ /vagrant/data
+sudo ln -s /vagrant/data /home/vagrant
+
 echo '=== UPDATE APT ==='
 sudo apt-get update
 
