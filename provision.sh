@@ -26,6 +26,8 @@ fi
 sudo mv /home/vagrant/ /vagrant/data
 sudo ln -s /vagrant/data /home/vagrant
 
+cd /home/vagrant
+
 echo '=== UPDATE APT ==='
 sudo apt-get update
 
